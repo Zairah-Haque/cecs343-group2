@@ -10,7 +10,7 @@ main only
 
 
 
-email the QA lead. Not a public Issue. 
+email: sangthiannuansangthian@gmail.com (Not a public Issue)
 
 
 
@@ -18,7 +18,9 @@ email the QA lead. Not a public Issue.
 
 
 
-steps to reproduce, expected, actual
+steps to reproduce - 
+expected - 
+actual - 
 
 
 
