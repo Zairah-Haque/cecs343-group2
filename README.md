@@ -15,4 +15,4 @@ Zairah - Zairah-Haque - Documentation and Log lead
  - Delivery method
 
 ## Running: 
-There is no runnable code yet. (WE HAVE CODE NOW)
+We have a running application and tester code for the homepage.
