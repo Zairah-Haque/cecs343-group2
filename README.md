@@ -15,4 +15,4 @@ Zairah - Zairah-Haque - Documentation and Log lead
  - Delivery method
 
 ## Running: 
- We have a running application and tester code for the homepage.
+We have a running application and tester code for the homepage.
