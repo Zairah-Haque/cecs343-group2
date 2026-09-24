@@ -1,3 +1,10 @@
+PR #18 2026-09-23 @Biltzeebub
+Requested: One pytest test for "Compile Tea Catalog and Typology" — teas sorted by type, then harvest year, then price per gram — that fails today and passes once built.
+Generated: One fixture (in-memory DB, 3 seeded teas), one test function. 34 lines.
+Claimed: get_catalog() returns teas ordered by type, then harvest_year, then price_per_gram.
+Verified: Not run.
+Not verified: whether the test executes at all — app.database and app.catalog don't exist yet, so it may fail on import before ever reaching the assertion. [moderate]
+
 ## PR #12 2026-09-23 @IvanLuu005
 Requested: ChatGPT Work, A pytest for removing selected tea from cart.
 Generated: 9 lines, one test function
