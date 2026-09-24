@@ -8,6 +8,7 @@ Format:
 	Ivanluu005-license
 	Sangthian-SECURITY
 	Zairah--Documentation-and-Log
+	origin/kekoa-codeowners
 	
 Nobody commits directly to `main`. All work happens on a branch.
 
