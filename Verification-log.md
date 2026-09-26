@@ -25,3 +25,10 @@ Generated: 8 lines, one test function
 Claimed: Fails now, passes once the shipping page displays the customer’s cart
 Verified: ran it. Fails with AssertionError because the shipping page is not implemented.
 Not verified: That the client fixture, /shipping route, and session format match the implementation [moderate]
+
+## PR #12 2026-09-23 @kekoavan
+Requested: ChatGPT Work, a pytest test for viewing tea information. 
+Generated: 23 lines, one test function
+Claimed: Customers can view tea name, description, and price at /teas. 
+Verified: Ran it, code and test files were created and inspected.
+Not verified: Whether the pytest test passes [minor]
