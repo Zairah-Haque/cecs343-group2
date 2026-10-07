@@ -1,5 +1,9 @@
 Purpose
-Actors
+Actors: 
+  Customer
+  Shop Owner
+  Seller
+  Logistics
 Functional
 Quality
 Out of Scope
