@@ -1,0 +1,61 @@
+Actor: Customer
+Goal: View the teas in the order before it ships.
+Precondition: The customer has an order containing teas, and it has not shipped.
+Main success scenario:
+1. The customer clicks the shopping cart icon.
+2. The system opens the shipping page.
+3. The system displays the teas in the order.
+Extensions: None are specified by the requirement.
+#18 Quality - How fast the catalog page responds
+
+Actor: Security auditor
+Goal: Verify that all stored customer passwords are protected from being stored in readable form.
+Precondition: Customer passwords are stored in the database and in a backup.
+Main success scenario:
+1. The auditor inspects the database for stored customer passwords.
+2. The auditor inspects the backup for stored customer passwords.
+3. The auditor finds no stored customer password in readable form in either inspection.
+Extensions:
+- 1a. The auditor finds a stored customer password in readable form in the database. The requirement is not met.
+- 2a. The auditor finds a stored customer password in readable form in the backup. The requirement is not met.
+Actor: Customer
+#20 Quality - Protecting customer passwords by encryption
+
+Goal: View the teas in the order before it ships.
+Precondition: The customer has an order containing teas that has not shipped.
+Main success scenario:
+1. The customer clicks the shopping cart icon.
+2. The system opens the shipping page.
+3. The system displays the teas in the order.
+Extensions: None are specified by the requirement.
+#7 Create shipping page so customers can view order
+
+Actor: Customer 
+Goal: Add a chosen tea drink to the cart.
+Precondition: he person is viewing a tea drink that can be added to the cart.
+Main success scenario:
+The system displays an icon or button for adding the tea drink to the cart.
+The person selects the icon or button.
+The system adds the chosen tea drink to the cart.
+Extensions: None are specified by the requirement.
+#10 Adding Tea Choice to Cart
+
+Actor: Customer
+Goal: Remove a tea from the shopping cart after changing their mind.
+Precondition: A tea is in the shopping cart.
+Main success scenario
+1. The user views the shopping cart.
+2. The system displays the tea’s name and a trash can icon next to it.
+3. The user selects the trash can icon.
+4. The system removes the tea from the shopping cart.
+Extensions:None are specified by the requirement.
+#14 Removing Tea From Cart
+
+Actor: Customer:
+Goal:Submit checkout repeatedly without creating duplicate orders.
+Main success scenario:
+1.The user clicks the checkout button multiple times quickly.
+2. The system processes the repeated submissions without creating duplicate orders.
+Extensions:None are specified by the requirement.
+#19 Quality - Prevent multiple orders from being submitted
+ 
