@@ -19,3 +19,12 @@ Extensions: None are specified by the requirement.
 #7 Create shipping page so customers can view order
 
 
+Actor: Customer 
+Goal: Add a chosen tea drink to the cart.
+Precondition: he person is viewing a tea drink that can be added to the cart.
+Main success scenario:
+The system displays an icon or button for adding the tea drink to the cart.
+The person selects the icon or button.
+The system adds the chosen tea drink to the cart.
+Extensions: None are specified by the requirement.
+#10 Adding Tea Choice to Cart
