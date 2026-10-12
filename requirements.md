@@ -12,7 +12,6 @@ Functional:
     #13 Compile tea catalogue and typology 
     #14 Tea removed from cart
     
-    
-Quality
+Quality: Protecting customer passwords by encryption, Prevent multiple orders from being submitted, How fast the catalog page responds
 Out of Scope
 Open Questions
