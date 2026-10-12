@@ -5,7 +5,14 @@ Actors:
   Shop Owner
   Seller
   Logistics
-Functional
+Functional:
+    #7 creating a shipping page
+    #8 creating a display page for teas available 
+    #10 adding tea to cart 
+    #13 Compile tea catalogue and typology 
+    #14 Tea removed from cart
+    
+    
 Quality
 Out of Scope
 Open Questions
