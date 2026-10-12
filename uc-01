@@ -48,4 +48,14 @@ Main success scenario
 2. The system displays the tea’s name and a trash can icon next to it.
 3. The user selects the trash can icon.
 4. The system removes the tea from the shopping cart.
+Extensions:None are specified by the requirement.
 #14 Removing Tea From Cart
+
+Actor: Customer:
+Goal:Submit checkout repeatedly without creating duplicate orders.
+Main success scenario:
+1.The user clicks the checkout button multiple times quickly.
+2. The system processes the repeated submissions without creating duplicate orders.
+Extensions:None are specified by the requirement.
+#19 Quality - Prevent multiple orders from being submitted
+ 
