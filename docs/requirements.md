@@ -1,22 +1,24 @@
 # Requirements
 
 ## Purpose
-Who this is for and what problem it removes, in two sentences.
-
-Not written yet
+Created for customers who are looking to buy tea from merchants who sell them via the website. This eliminates physical limitations of distance, availability, and logistics while reaching a larger customer base. 
 
 ## Actors
-Every person or system that touches it, one line each.
-
-Not written yet
+1. Customer
+2. Shop Owner/Seller
+3. Sales Staff
+4. Logistics Staff
 
 ## Functional
-Numbered requirements, each naming its Issue number.
 
-Not written yet
+#7 creating a shipping page
+#8 creating a display page for teas available 
+#10 adding tea to cart 
+#13 Compile tea catalogue and typology 
+#14 Tea removed from cart
+    
 
 ## Quality
-Your three quality requirements from Class 09, with their numbers.
 
 ### Q1. Catalog page responds quickly (#18)
 - **Number:** the first screen of the tea catalog page appears within 2 seconds
