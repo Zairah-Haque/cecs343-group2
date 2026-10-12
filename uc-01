@@ -28,3 +28,13 @@ The person selects the icon or button.
 The system adds the chosen tea drink to the cart.
 Extensions: None are specified by the requirement.
 #10 Adding Tea Choice to Cart
+
+Actor: Customer
+Goal: Remove a tea from the shopping cart after changing their mind.
+Precondition: A tea is in the shopping cart.
+Main success scenario
+1. The user views the shopping cart.
+2. The system displays the tea’s name and a trash can icon next to it.
+3. The user selects the trash can icon.
+4. The system removes the tea from the shopping cart.
+#14 Removing Tea From Cart
