@@ -1,9 +1,21 @@
-##Actor:
+Actor: Customer
+Goal: View the teas in the order before it ships.
+Precondition: The customer has an order containing teas, and it has not shipped.
+Main success scenario:
+1. The customer clicks the shopping cart icon.
+2. The system opens the shipping page.
+3. The system displays the teas in the order.
+Extensions: None are specified by the requirement.
+#18 Quality - How fast the catalog page responds
 
-##Goal:
+Actor: Customer
+Goal: View the teas in the order before it ships.
+Precondition: The customer has an order containing teas that has not shipped.
+Main success scenario:
+1. The customer clicks the shopping cart icon.
+2. The system opens the shipping page.
+3. The system displays the teas in the order.
+Extensions: None are specified by the requirement.
+#7 Create shipping page so customers can view order
 
-##Precondition: 
 
-##Main Success Scenario:
-
-##Extenstions: 
