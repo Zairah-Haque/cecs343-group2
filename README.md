@@ -16,3 +16,8 @@ Zairah - Zairah-Haque - Documentation and Log lead
 
 ## Running: 
 We have a running application and tester code for the homepage.
+
+## Licensing:
+Licence: Permissive
+Dependency: How should customers browse the tea catalog: by category, typology, search, or filters? 
+Dependency Licence: Copyright, Display Patch Notes for Updates
