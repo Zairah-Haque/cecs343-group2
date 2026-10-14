@@ -59,3 +59,17 @@ Main success scenario:
 Extensions:None are specified by the requirement.
 #19 Quality - Prevent multiple orders from being submitted
  
+Actor: Customer
+Goal: See only the teas of one type and one flavor profile.
+Precondition: The catalog lists teas, and each tea has one type and one profile.
+Main success scenario:
+1. The customer opens the main page.
+2. The system shows type tabs down the left side, a profile filter above the tea cards, and a card for every tea.
+3. The customer clicks a type tab.
+4. The system shows only the cards of that type.
+5. The customer selects a profile in the profile filter.
+6. The system shows only the cards of that type with that profile.
+Extensions:
+- 5a. No tea of the selected type has the selected profile. The system shows the text "No teas match <profile> in <type>", a "Clear filter" button, and no cards.
+- 5a.1. The customer clicks "Clear filter". The system shows the cards of the selected type again, and the profile filter shows no selection.
+#13 Browse teas by type and profile
