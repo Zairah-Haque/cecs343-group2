@@ -51,4 +51,13 @@ Not written yet
 ## Open questions
 Each with a question, an owner, a date, and a default.
 
-Not written yet
+Owner: Shop Owner
+Date: 10/14/2026
+Default: Show categories and typology; omit search and filters.
+How should customers browse the tea catalog: by category, typology, search, or filters?
+
+Owner: Shop Owner
+Date: 10/14/2026
+Default: Keep it in the cart and show that it is unavailable before checkout.
+How should the site handle a tea that becomes unavailable while it is in a customer’s cart?
+
