@@ -61,3 +61,11 @@ Date: 10/14/2026
 Default: Keep it in the cart and show that it is unavailable before checkout.
 How should the site handle a tea that becomes unavailable while it is in a customer’s cart?
 
+Owner: Shop Owner 
+Date: 10/14/2026
+Default: Prevent multiple orders from being submitted. What counts as a duplicate submission: repeated clicks, a browser retry, or submitting the same cart again? How long should the system treat submissions as duplicates?
+
+Owner: Shop Owner
+Date: 10/14/2026
+Default: Should the page show the customer’s cart before checkout, the most recently submitted order, or an order that has shipped?
+
