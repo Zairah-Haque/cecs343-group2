@@ -1,10 +1,17 @@
-## Who is this for?:
+---
+name: Slice
+about: A vertical slice of a feature with a user, behavior, and acceptance criteria
+title: "[Slice] "
+labels: slice
+---
 
-## What does this issue do?:
+## Who is this for?
 
-## How a stranger identify it's function?:
+## What does this issue do?
+
+## How can a stranger identify its function?
 
 ## Acceptance criteria
 - [ ] Given ... When ... Then ...
 
-## Out of scope for this Issue:
+## Out of scope for this issue
