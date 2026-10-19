@@ -73,3 +73,13 @@ Extensions:
 - 5a. No tea of the selected type has the selected profile. The system shows the text "No teas match <profile> in <type>", a "Clear filter" button, and no cards.
 - 5a.1. The customer clicks "Clear filter". The system shows the cards of the selected type again, and the profile filter shows no selection.
 #13 Browse teas by type and profile
+
+Actor: Customer
+Goal: View the available teas with the description and price of each tea.
+Precondition: The catalog lists available teas, and each tea has a description and a price.
+1. Main success scenario:
+2. The customer opens /teas.
+3. The system displays each available tea.
+4. The system displays the description and price of each tea next to its name.
+Extensions: None are specified by the requirement.
+#8 Create /teas
