@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     Customer -->|clicks| CartIcon["Shopping cart icon"]
     CartIcon -->|opens| System
@@ -19,16 +20,17 @@ flowchart TD
 
     Customer -->|opens| TeasPage["/teas"]
     TeasPage -->|displays| AvailableTeas["Available teas"]
-    AvailableTeas -->|shows description and price| Teas
+    AvailableTeas -->|"shows description and price"| Teas
 
     Customer -->|selects| AddButton["Add icon or button"]
     AddButton -->|adds chosen tea| Cart["Shopping cart"]
 
     Customer -->|views| Cart
-    Cart -->|shows name and trash can icon| TeaInCart["Tea in cart"]
+    Cart -->|"shows name and trash can icon"| TeaInCart["Tea in cart"]
     Customer -->|selects| TrashIcon["Trash can icon"]
     TrashIcon -->|removes tea| Cart
 
     Customer -->|clicks repeatedly| CheckoutButton["Checkout button"]
     CheckoutButton -->|submits checkout| System
     System -->|processes without duplicates| Order
+```
