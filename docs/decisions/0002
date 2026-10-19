@@ -1,1 +1,13 @@
+Decision: Keep slice.md in .github/ISSUE_TEMPLATE/ so GitHub can offer it when someone creates an issue.
 
+Rejected alternatives:
+- Put slice.md at the repository root. This was the alternative named in Prompt D; GitHub does not use a root-level file as an issue template.
+- Put slice.md in docs/. GitHub’s issue-template behavior depends on its recognized template location, which the team cannot change.
+Costs: Contributors need to know that the template lives under .github/ISSUE_TEMPLATE/; moving it elsewhere would change whether GitHub offers it during issue creation.
+
+Decision: Keep requirements.md in docs/ so the project requirements have their own file in the documentation folder.
+
+Rejected alternatives:
+- Put requirements.md at the repository root. This was the alternative named in Prompt D; the requirements would then sit beside the README and team guidance files.
+- Put the requirements directly in README.md. The README already introduces the project, but combining the requirements with it would make the file serve both purposes.
+Costs: Readers need to open docs/ to find the requirements instead of seeing them at the repository root.
