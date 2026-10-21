@@ -1,0 +1,24 @@
+sequenceDiagram
+    participant Customer
+    participant MainPage
+    participant TeasPage
+    participant Cart
+    participant System
+    participant Order
+
+    Customer->>MainPage: GET /
+    MainPage-->>Customer: 200 OK
+    Customer->>MainPage: filterByType(type)
+    MainPage-->>Customer: filteredTeaCards
+    Customer->>MainPage: filterByProfile(profile)
+    MainPage-->>Customer: filteredTeaCards
+    Customer->>TeasPage: GET /teas
+    TeasPage-->>Customer: 200 OK with tea descriptions and prices
+    Customer->>Cart: POST /cart/items(teaId)
+    Cart-->>Customer: 201 Created
+    Customer->>Cart: GET /cart
+    Cart-->>Customer: cartItems
+    Customer->>System: POST /checkout
+    System->>Order: createOrder(cartItems)
+    Order-->>System: orderCreated
+    System-->>Customer: checkoutConfirmation
