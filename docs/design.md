@@ -87,3 +87,17 @@ classDiagram
     Backup "1" --> "0..*" Passwords : passwords
     Backup ..> Database
 ```
+
+| Rank | File | Project files it imports | Project files importing it |
+|---:|---|---:|---:|
+| 1 | `tea.py` | 0 | 4 |
+| 2 | `passwords.py` | 0 | 3 |
+| 3 | `order.py` | 1 | 2 |
+| 4 | `catalog.py` | 1 | 2 |
+| 5 | `customer.py` | 3 | 2 |
+| 6 | `database.py` | 3 | 2 |
+| 7 | `shopping_cart.py` | 1 | 1 |
+| 8 | `backup.py` | 2 | 1 |
+| 9 | `app.py` | 6 | 0 |
+
+The top-ranked file is tea.py; four files import it: shopping_cart.py, order.py, catalog.py, and app.py. It appears as the Tea class in Prompt 2 and as tea in Prompt 1. Since the use cases mention teas, the diagrams converge on it. This is afferent coupling to tea.py.
