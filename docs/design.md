@@ -100,4 +100,4 @@ classDiagram
 | 8 | `backup.py` | 2 | 1 |
 | 9 | `app.py` | 6 | 0 |
 
-The top-ranked file is tea.py; four files import it: shopping_cart.py, order.py, catalog.py, and app.py. It appears as the Tea class in Prompt 2 and as tea in Prompt 1. Since the use cases mention teas, the diagrams converge on it. This is afferent coupling to tea.py.
+tea.py represents a tea using its ID, name, type, profile, description, and price. Its fields support one purpose, so it has functional cohesion on the seven-level scale. Four files import it—`shopping_cart.py`, order.py, catalog.py, and app.py—giving it afferent coupling of four. The repository has no pull request documenting tea.py as an intentional shared foundation, so we classify its growth as accidental. Splitting it would involve reviewing and potentially updating tea.py and those four importing files, depending on which code moves.
