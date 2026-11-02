@@ -19,7 +19,7 @@ def client():
 def test_homepage_displays_tea_shop_and_a_tea(client):
     response = client.get("/")
 
-    assert response.status_code == 201
+    assert response.status_code == 200
     assert b"Tea Shop" in response.data
     assert b"Green Tea" in response.data
 
