@@ -25,3 +25,7 @@ Dependency Licence: Copyright, Display Patch Notes for Updates
 ## CI
 
 Successful CI Test : (https://github.com/Zairah-Haque/cecs343-group2/actions/runs/41540435123)
+
+##  Verification debt
+
+Weighted count: 7 (computed 2026-11-06)
