@@ -21,3 +21,7 @@ We have a running application and tester code for the homepage.
 Licence: Permissive
 Dependency: How should customers browse the tea catalog: by category, typology, search, or filters? 
 Dependency Licence: Copyright, Display Patch Notes for Updates
+
+## CI
+
+Successful CI Test : (https://github.com/Zairah-Haque/cecs343-group2/actions/runs/41540435123)
