@@ -32,3 +32,38 @@ Generated: 23 lines, one test function
 Claimed: Customers can view tea name, description, and price at /teas. 
 Verified: Ran it, code and test files were created and inspected.
 Not verified: Whether the pytest test passes [minor]
+
+## PR #30 2026-10-19 @Zairah-Haque
+Requested: ChatGPT Work, a mermaid diagram 
+Generated: 36 lines
+Claimed: Mermaid diagram created from use cases. 
+Verified: Looked over diagram and slides to see if it corresponds. 
+Not verified: N/A 
+
+## PR #31 2026 - 10 - 21 @Zairah-Haque
+Requested: ChatGPT Work, a sequence diagram 
+Generated: 26 lines
+Claimed: Sequence diagram to show customer interaction flow. 
+Verified: Looked over diagram and slide to see if it corresponds. 
+Not verified: N/A
+
+## PR #33 2026 - 10 - 26 @Santie0
+Requested: ChatGPT Work, a mermaid diagram 
+Generated: 26 lines
+Claimed: Mermaid diagram created based off code. 
+Verified: Looked over diagram and slide to see if it corresponds. 
+Not verified: N/A
+
+## PR #35 2026 - 10 - 28 @Santie0
+Requested: ChatGPT Work, a mermaid diagram 
+Generated: 26 lines
+Claimed: Mermaid diagram of files if database.py was changed.  
+Verified: Looked over diagram and slide to see if it corresponds. 
+Not verified: N/A
+
+## PR #43 2026 - 11 - 4 @Santie0
+Requested: ChatGPT Work, code for tea catalog 
+Generated: 323 lines, one test function 
+Claimed: Code will show a tea catalog page with description of teas.   
+Verified: Looked over code to see if it matches with what's needed in catalog & if test.py runs.  
+Not verified: Whether tests pass or fails. 
