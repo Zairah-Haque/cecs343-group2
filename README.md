@@ -14,8 +14,26 @@ Michael - Biltzeebub - Documentation and Log lead
  - Payment method
  - Delivery method
 
-## Running: 
-We have a running application and tester code for the homepage.
+## Running
+
+Requires Python 3.12. From the repository root:
+
+```
+pip install -r requirements.txt
+cd tea-catalog-code
+flask --app app run
+```
+
+Open http://127.0.0.1:5000/ (in a Codespace, open the forwarded port 5000).
+
+## Testing
+
+From the repository root:
+
+```
+pytest
+```
+
 
 ## Licensing:
 Licence: Permissive
