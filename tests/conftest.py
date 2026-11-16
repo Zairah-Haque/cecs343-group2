@@ -1,3 +1,67 @@
+from types import SimpleNamespace
+
+from app import Tea, app, customer, database
+
+
+def test_teas_page_shows_names_descriptions_and_prices(monkeypatch):
+    teas = [
+        Tea(
+            1,
+            "Jasmine Green Tea",
+            "Green",
+            "Floral",
+            "Light green tea scented with jasmine blossoms",
+            4.50,
+        ),
+        Tea(2, "Earl Grey", "Black", "Citrus", "Black tea flavored with bergamot", 4.00),
+    ]
+    monkeypatch.setattr(database, "get_teas", lambda: teas)
+
+    response = app.test_client().get("/teas")
+
+    assert response.status_code == 200
+    page = response.get_data(as_text=True)
+    assert "Jasmine Green Tea" in page
+    assert "Light green tea scented with jasmine blossoms" in page
+    assert "$4.50" in page
+    assert "Earl Grey" in page
+    assert "Black tea flavored with bergamot" in page
+    assert "$4.00" in page
+
+
+def test_teas_page_shows_empty_menu_message_without_listings(monkeypatch):
+    monkeypatch.setattr(database, "get_teas", lambda: [])
+
+    response = app.test_client().get("/teas")
+
+    assert response.status_code == 200
+    page = response.get_data(as_text=True)
+    assert "No teas are currently available." in page
+    assert "<article>" not in page
+
+
+def test_teas_page_shows_load_error_without_listings(monkeypatch):
+    def unavailable_menu():
+        raise RuntimeError("menu service unavailable")
+
+    monkeypatch.setattr(database, "get_teas", unavailable_menu)
+
+    response = app.test_client().get("/teas")
+
+    assert response.status_code == 200
+    page = response.get_data(as_text=True)
+    assert "The tea menu could not be loaded." in page
+    assert "<article>" not in page
+
+
+def test_teas_page_shows_fallback_for_missing_description(monkeypatch):
+    tea = Tea(1, "Jasmine Green Tea", "Green", "Floral", "", 4.50)
+    monkeypatch.setattr(database, "get_teas", lambda: [tea])
+
+    response = app.test_client().get("/teas")
+
+    assert response.status_code == 200
+    page = response.get_data(as_text=True)
     assert "Jasmine Green Tea" in page
     assert "$4.50" in page
     assert "No description is available." in page
