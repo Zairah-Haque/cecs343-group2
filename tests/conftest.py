@@ -1,6 +1,6 @@
 import pytest
 
-from tea_catalog_code.app import Tea, app, database
+from tea-catalog-code.app import Tea, app, database
 
 
 @pytest.fixture
