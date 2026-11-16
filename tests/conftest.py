@@ -1,3 +1,11 @@
+import sys
+from pathlib import Path
+
+sys.path.insert(
+    0,
+    str(Path(__file__).resolve().parents[1] / "tea-catalog-code"),
+)
+
 import pytest
 
 from tea-catalog-code.app import Tea, app, database
