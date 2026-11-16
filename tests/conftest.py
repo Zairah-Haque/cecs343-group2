@@ -1,7 +1,13 @@
 
-import pytest
+import sys
+from pathlib import Path
 
-from tea-catalog-code.app import Tea, app, database
+sys.path.insert(
+    0,
+    str(Path(__file__).resolve().parents[1] / "tea-catalog-code"),
+)
+
+from app import Tea, app, database
 
 
 @pytest.fixture
