@@ -67,3 +67,10 @@ Generated: 323 lines, one test function
 Claimed: Code will show a tea catalog page with description of teas.   
 Verified: Looked over code to see if it matches with what's needed in catalog & if test.py runs.  
 Not verified: Whether tests pass or fails. 
+
+## PR #14 2026-11-11 @IvanLuu005
+Requested: ChatGPT Work, a list of portions missing from M2
+Generated: List of issues that have not been addressed in M2
+Claimed: All M2 requirements will be fulfilled after completing the fix
+Verified: docs/decisions have been fixed and are up to standard for M2
+Not Verified: Other issues for M2.
