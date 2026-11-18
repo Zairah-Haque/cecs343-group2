@@ -68,7 +68,7 @@ Claimed: Code will show a tea catalog page with description of teas.
 Verified: Looked over code to see if it matches with what's needed in catalog & if test.py runs.  
 Not verified: Whether tests pass or fails. 
 
-## PR #58 2026-11-11 @IvanLuu005
+## PR #58 2026 - 11 - 11 @IvanLuu005
 Requested: ChatGPT Work, a list of portions missing from M2
 Generated: List of issues that have not been addressed in M2
 Claimed: All M2 requirements will be fulfilled after completing the fix
