@@ -74,3 +74,4 @@ Generated: List of issues that have not been addressed in M2
 Claimed: All M2 requirements will be fulfilled after completing the fix
 Verified: docs/decisions have been fixed and are up to standard for M2
 Not Verified: Other issues for M2.
+
