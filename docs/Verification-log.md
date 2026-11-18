@@ -47,6 +47,14 @@ Claimed: Sequence diagram to show customer interaction flow.
 Verified: Looked over diagram and slide to see if it corresponds. 
 Not verified: N/A
 
+## PR #32 2026 - 10 - 21 @Zairah-Haque
+Requested: ChatGPT Work, a sequence diagram 
+Generated: 72 lines
+Claimed: Both mermaid and Sequence diagram merged into Architecture.md to show costumer interaction flow and function/class interactions. 
+Verified: Looked over diagram and slide to see if it corresponds. 
+Not verified: N/A
+
+
 ## PR #33 2026 - 10 - 26 @Santie0
 Requested: ChatGPT Work, a mermaid diagram 
 Generated: 26 lines
