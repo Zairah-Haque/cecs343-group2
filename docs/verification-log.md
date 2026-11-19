@@ -6,6 +6,24 @@ Verified: Compared the Files changed view: each of the 12 entries appears once r
 Not verified: Character-by-character match of entry wording, because the pasted text was not diffed with a tool. [minor]
 Disposition: Accepted after the Files changed comparison.
 
+## PR #64 2026-11-19 @Biltzeebub
+Tool and mode: Claude, chat
+Requested: Draft Verification Log entries for PRs #59 and #64 from the repo history and earlier chats.
+Generated: Two entries, about 16 lines.
+Claimed: Each entry matches what its PR changed and how it was checked.
+Verified: Compared each entry against its PR's Files changed tab: #59 is two renames with 0 lines changed, #64 is README +20/-2.
+Not verified: Whether the Verified lines of #59 and #64 describe exactly what I did, beyond the Codespace run. [minor]
+Disposition: Accepted after editing the Verified and Disposition lines to match what I did.
+
+## PR #59 2026-11-19 @Biltzeebub
+Tool and mode: Claude, chat
+Requested: Draft Verification Log entries for PRs #59 and #64 from the repo history and earlier chats.
+Generated: Two entries, about 16 lines.
+Claimed: Each entry matches what its PR changed and how it was checked.
+Verified: Compared each entry against its PR's Files changed tab: #59 is two renames with 0 lines changed, #64 is README +20/-2.
+Not verified: Whether the Verified lines of #59 and #64 describe exactly what I did, beyond the Codespace run. [minor]
+Disposition: Accepted after editing the Verified and Disposition lines to match what I did.
+
 ## PR #58 2026 - 11 - 11 @IvanLuu005
 Requested: ChatGPT Work, a list of portions missing from M2
 Generated: List of issues that have not been addressed in M2
