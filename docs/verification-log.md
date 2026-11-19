@@ -111,9 +111,11 @@ Claimed: Fails until the tea catalog compiler and primary tea typologies exist.
 Verified: Test runs and passes
 Not Verified: Test execution and integration. [major]
 
-## PR #13 2026-09-23 @Biltzeebub
+## Issue #13 (class exercise, no PR) 2026-09-23 @Biltzeebub
+Tool and mode: Claude, Cowork
 Requested: One pytest test for "Compile Tea Catalog and Typology" — teas sorted by type, then harvest year, then price per gram — that fails today and passes once built.
 Generated: One fixture (in-memory DB, 3 seeded teas), one test function. 34 lines.
 Claimed: get_catalog() returns teas ordered by type, then harvest_year, then price_per_gram.
 Verified: Not run.
 Not verified: whether the test executes at all — app.database and app.catalog don't exist yet, so it may fail on import before ever reaching the assertion. [moderate]
+Disposition: Not committed; the test is not in the repo.
