@@ -1,3 +1,12 @@
+## PR #72 2026-11-19 @Biltzeebub
+Tool and mode: Claude, Cowork
+Requested: Corrected wording for the #13 entry (heading, Tool and mode, Disposition), after checking whether the #13 test was ever committed.
+Generated: A replacement #13 entry of about 9 lines, a commit message and a PR description.
+Claimed: The heading and Disposition are accurate: #13 is an Issue number with no PR, and the catalog-sort test is not in the repo.
+Verified: The diff changes only the #13 heading and adds the Tool and mode and Disposition lines (+3 -1). The names get_catalog, harvest_year and price_per_gram appear in no code or test file, only in this log.
+Not verified: Whether the test was ever written or run outside the repo, for example locally or in a chat. [minor]
+Disposition: Accepted as drafted.
+
 ## PR #71 2026-11-19 @Biltzeebub
 Tool and mode: Claude, chat
 Requested: Draft Verification Log entries for PRs #59 and #64 from the repo history and earlier chats, and restore the entries lost in the PR #70 merge (all of #13 and the end of #14).
@@ -111,9 +120,11 @@ Claimed: Fails until the tea catalog compiler and primary tea typologies exist.
 Verified: Test runs and passes
 Not Verified: Test execution and integration. [major]
 
-## PR #13 2026-09-23 @Biltzeebub
+## Issue #13 (class exercise, no PR) 2026-09-23 @Biltzeebub
+Tool and mode: Claude, Cowork
 Requested: One pytest test for "Compile Tea Catalog and Typology" — teas sorted by type, then harvest year, then price per gram — that fails today and passes once built.
 Generated: One fixture (in-memory DB, 3 seeded teas), one test function. 34 lines.
 Claimed: get_catalog() returns teas ordered by type, then harvest_year, then price_per_gram.
 Verified: Not run.
 Not verified: whether the test executes at all — app.database and app.catalog don't exist yet, so it may fail on import before ever reaching the assertion. [moderate]
+Disposition: Not committed; the test is not in the repo.
