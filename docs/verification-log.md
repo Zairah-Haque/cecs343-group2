@@ -30,8 +30,8 @@ Tool and mode: Claude, chat
 Requested: README run and test commands, so a fresh Codespace can start the app and run the tests using only the README (M3 requirement).
 Generated: A "Running" and a "Testing" section for README.md, about 20 lines: pip install -r requirements.txt, cd tea-catalog-code, flask --app app run, the local URL, and pytest.
 Claimed: Running those commands from the repository root starts the app and runs the tests.
-Verified: The committed text is identical to the draft (checked against the diff). The commands were run on a scratch copy of the repo (pytest: 1 passed; /, /teas and /cart returned HTTP 200), and I ran them in a fresh Codespace on the PR branch, where they passed.
-Not verified: A fresh Codespace on main after the merge, and later on release/0.9. [minor]
+Verified: The committed text is identical to the draft (checked against the diff). The commands were run on a scratch copy of the repo (pytest: 1 passed; /, /teas and /cart returned HTTP 200), and I ran them in a fresh Codespace on the PR branch, where they passed. Fresh Codespace on main, 2026-11-19: pytest passed; the app loaded at /, /teas and /cart using the README commands.
+Not verified: A fresh Codespace on release/0.9 (the branch does not exist yet). [minor]
 Disposition: Accepted as drafted, no edits.
 
 ## PR #59 2026-11-15 @Biltzeebub
