@@ -25,6 +25,15 @@ Verified: The Files changed view showed the lowercase file name and the entries 
 Not verified: The paste dropped the end of #14 and all of #13, which I found after the merge and restored in PR #71. The other entries were not compared character by character when merged. [minor]
 Disposition: Accepted, then corrected in PR #71.
 
+## PR #69 2026 - 11 - 16 @Santie0
+Tool: ChatGPT, Work
+Requested: Tasks left to do for the completion of M3 and M4. 
+Generated: 22 lines
+Claimed: Generate table with the tasks that are left to do to complete the criteria for M3 and M4. 
+Verified: Looked at tasks generated to see if it corresponds with the cirterias needed for M3 and M4.  
+Not verified: Whether there are other tasks missing in the table. [minor] 
+Disposition: Accepted as drafted. 
+
 ## PR #64 2026-11-15 @Biltzeebub
 Tool and mode: Claude, chat
 Requested: README run and test commands, so a fresh Codespace can start the app and run the tests using only the README (M3 requirement).
@@ -33,6 +42,12 @@ Claimed: Running those commands from the repository root starts the app and runs
 Verified: The committed text is identical to the draft (checked against the diff). The commands were run on a scratch copy of the repo (pytest: 1 passed; /, /teas and /cart returned HTTP 200), and I ran them in a fresh Codespace on the PR branch, where they passed.
 Not verified: A fresh Codespace on main after the merge, and later on release/0.9. [minor]
 Disposition: Accepted as drafted, no edits.
+
+## PR #63 2026 - 11 - 15 @Santie0
+No AI on PR #63
+
+## PR #62 2026 - 11 - 15 @Santie0
+No AI on PR #62
 
 ## PR #59 2026-11-15 @Biltzeebub
 Tool and mode: Claude, chat
@@ -50,26 +65,41 @@ Claimed: All M2 requirements will be fulfilled after completing the fix
 Verified: docs/decisions have been fixed and are up to standard for M2
 Not Verified: Other issues for M2.
 
+## PR #55 2026 - 11 - 16 @Santie0
+Tool: ChatGPT, Work
+Requested: Code to test tea catalog page
+Generated: 114 lines
+Claimed: Code will test the tea catalog page according to the acceptance criteria of Issue #8. 
+Verified: Looked to see if code corresponds with what's written for the acceptance criteria of Issue #8. Ran confest.py to see if it works, 2 tests failed with AssertationError and 5 tests passed. 
+Not verified: Whether code runs on a new codespace in Github and what caused the 2 tests to fail. [moderate]
+Disposition: Accepted after other members looked over it. 
+
 ## PR #43 2026 - 11 - 4 @Santie0
-Requested: ChatGPT Work, code for tea catalog 
+Tool: ChatGPT, Work
+Requested: Code for tea catalog  
 Generated: 323 lines, one test function 
-Claimed: Code will show a tea catalog page with description of teas.   
-Verified: Looked over code to see if it matches with what's needed in catalog & if test.py runs.  
-Not verified: Whether tests pass or fails.
+Claimed: Code will show tea catalog once ran, along with working implementations for other functions of the shop.   
+Verified: Looked over code to see if it matches with what's needed in catalog. Ran the test function to see whether it passes or fails the test. 
+Not verified: Whether code runs on a new codespace in Github. [moderate]
+Disposition: Accepted after other members looked over it. 
 
 ## PR #35 2026 - 10 - 28 @Santie0
-Requested: ChatGPT Work, a mermaid diagram 
+Tool: ChatGPT, Work
+Requested: Decision of copying Tea object's detail, along with the because, rejecteds, and costs. And a mermaid diagram for separating database.py into a different file. 
 Generated: 26 lines
-Claimed: Mermaid diagram of files if database.py was changed.  
-Verified: Looked over diagram and slide to see if it corresponds. 
-Not verified: N/A
+Claimed: A decision that would fix a problem that might occur down the line and it's reasons, costs, and why other decisions were rejected. And a Mermaid diagram of how files would change if database.py is separated. 
+Verified: Looked over previous mermaid diagrams to see if new diagram changes files that are on the previous diagram. Checked if mermaid diagram renders. 
+Not verified: Did not check whether the implementation copies every Tea field. And did not verify the estimate about files changed for a future edit. [moderate]
+Disposition: Accepted as drafted.  
 
 ## PR #33 2026 - 10 - 26 @Santie0
-Requested: ChatGPT Work, a mermaid diagram 
-Generated: 26 lines
-Claimed: Mermaid diagram created based off code. 
-Verified: Looked over diagram and slide to see if it corresponds. 
-Not verified: N/A
+Tool: ChatGPT, Work
+Requested: Two mermaid diagram, one showing the classes needed and it's inheritance type. A second diagram showing the implementations for each class. And a table ranking how many times a file is imported. 
+Generated: 101 lines
+Claimed: Two mermaid diagrams, one diagram showing the classes and it's inheritance needed for the shop. A second one showing the implementations for each class. And a table showing the number of imports a file has, and the amount of files that import it.  
+Verified: Looked over diagram to see if it has everything listed for what's needed in the shop. And compared the number of files imported on the table with the diagram created. Checked if mermaid diagram renders. 
+Not verified: Did not confirm the ranking against the code. [moderate] 
+Disposition: Accepted as drafted. 
 
 ## PR #32 2026 - 10 - 21 @Zairah-Haque
 Requested: ChatGPT Work, a sequence diagram 
@@ -100,11 +130,13 @@ Verified: Ran it, code and test files were created and inspected.
 Not verified: Whether the pytest test passes [minor]
 
 ## PR #7 2026-09-23 @Santie0 
-Requested: ChatGPT Work, a pytest test for the shipping page
+Tool: ChatGPT, Work 
+Requested: A pytest test for the shipping page
 Generated: 8 lines, one test function
 Claimed: Fails now, passes once the shipping page displays the customer’s cart
-Verified: ran it. Fails with AssertionError because the shipping page is not implemented.
+Verified: Ran it. Fails with AssertionError because the shipping page is not implemented.
 Not verified: That the client fixture, /shipping route, and session format match the implementation [moderate]
+Disposition: Rejected after running and failing. 
 
 ## PR #10 2026-09-23 @Zairah-Haque
 Requested : ChatGPT Work . A pytest test for adding selected tea to cart .
