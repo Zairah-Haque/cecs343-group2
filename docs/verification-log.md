@@ -6,6 +6,7 @@ Claimed: The edits record only what I ran: fresh Codespace on main, README comma
 Verified: I ran the Codespace test myself on 2026-11-19. The devcontainer installs requirements.txt on creation (read from .devcontainer/devcontainer.json). The Files changed tab shows only the two #64 lines and this new entry.
 Not verified: The pytest test count (I saw the 100% progress marker, not "1 passed"). A fresh Codespace on release/0.9, which does not exist yet. [minor]
 Disposition: Accepted as drafted.
+
 ## PR #72 2026-11-19 @Biltzeebub
 Tool and mode: Claude, Cowork
 Requested: Corrected wording for the #13 entry (heading, Tool and mode, Disposition), after checking whether the #13 test was ever committed.
