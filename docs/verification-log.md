@@ -1,3 +1,11 @@
+## PR #73 2026-11-19 @Biltzeebub
+Tool and mode: Claude, chat
+Requested: Exact wording to update the PR #64 log entry after a fresh-Codespace test on main, and the log entry for this PR.
+Generated: Two line edits to the #64 entry (Verified: appended the 2026-11-19 Codespace result; Not verified: narrowed to release/0.9) and this entry.
+Claimed: The edits record only what I ran: fresh Codespace on main, README commands, pytest passed, and /, /teas and /cart loaded.
+Verified: I ran the Codespace test myself on 2026-11-19. The devcontainer installs requirements.txt on creation (read from .devcontainer/devcontainer.json). The Files changed tab shows only the two #64 lines and this new entry.
+Not verified: The pytest test count (I saw the 100% progress marker, not "1 passed"). A fresh Codespace on release/0.9, which does not exist yet. [minor]
+Disposition: Accepted as drafted.
 ## PR #72 2026-11-19 @Biltzeebub
 Tool and mode: Claude, Cowork
 Requested: Corrected wording for the #13 entry (heading, Tool and mode, Disposition), after checking whether the #13 test was ever committed.
