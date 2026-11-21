@@ -16,6 +16,7 @@ class Tea:
     profile: str
     description: str
     price: float
+    available_quantity: int | None = None
 
 
 @dataclass
@@ -145,7 +146,7 @@ def home():
         """
         <h1>Tea Shop</h1>
         <p><a href="{{ url_for('teas_page') }}">All teas</a> ·
-           <a href="{{ url_for('cart_page') }}">Shopping cart</a></p>
+           <a href="{{ url_for('shipping_page') }}" aria-label="Shopping cart">🛒 Shopping cart</a></p>
         <form method="get">
           <label>Type <select name="type"><option value="">All</option>
             {% for value in tea_types %}<option {% if value == tea_type %}selected{% endif %}>{{ value }}</option>{% endfor %}
@@ -198,28 +199,57 @@ def teas_page():
     )
 
 
-@app.get("/cart")
-def cart_page():
+def _render_cart(message=None):
+    items_by_id = {}
+    for tea in customer.shopping_cart.teas:
+        if tea.tea_id in items_by_id:
+            items_by_id[tea.tea_id]["quantity"] += 1
+        else:
+            items_by_id[tea.tea_id] = {"tea": tea, "quantity": 1}
+
+    items = list(items_by_id.values())
+    subtotal = sum(item["tea"].price * item["quantity"] for item in items)
     return render_template_string(
         """
         <h1>Shopping cart</h1><p><a href="{{ url_for('home') }}">Home</a></p>
-        {% for tea in customer.shopping_cart.teas %}
-          <p>{{ tea.name }} — ${{ '%.2f'|format(tea.price) }}
-            <form method="post" action="{{ url_for('remove_from_cart', tea_id=tea.tea_id) }}"><button>Remove</button></form>
+        {% if message %}<p role="alert">{{ message }}</p>{% endif %}
+        {% for item in items %}
+          <p>{{ item.tea.name }} — Quantity: {{ item.quantity }} — ${{ '%.2f'|format(item.tea.price) }} each
+            <form method="post" action="{{ url_for('remove_from_cart', tea_id=item.tea.tea_id) }}"><button>Remove</button></form>
           </p>
         {% else %}<p>Your cart is empty.</p>{% endfor %}
+        <p>Subtotal: ${{ '%.2f'|format(subtotal) }}</p>
         <form method="post" action="{{ url_for('checkout') }}"><button>Checkout</button></form>
         """,
-        customer=customer,
+        items=items,
+        subtotal=subtotal,
+        message=message,
     )
+
+
+@app.get("/cart")
+def cart_page():
+    return _render_cart()
 
 
 @app.post("/cart/add/<int:tea_id>")
 def add_to_cart(tea_id: int):
     tea = catalog.find(tea_id)
-    if tea is not None:
+    if tea is None:
+        return _render_cart("That tea is unavailable.")
+    if getattr(tea, "available_quantity", None) == 0:
+        return _render_cart(f"{tea.name} is unavailable.")
+    if len(customer.shopping_cart.teas) >= 99:
+        return _render_cart("The cart limit has been reached.")
+
+    previous_items = list(customer.shopping_cart.teas)
+    try:
         customer.shopping_cart.add(tea)
-        customer.checkout_order = None
+    except Exception:
+        customer.shopping_cart.teas[:] = previous_items
+        return _render_cart("The item could not be added.")
+
+    customer.checkout_order = None
     return redirect(url_for("cart_page"))
 
 
@@ -240,16 +270,39 @@ def shipping_page():
     order = customer.checkout_order
     if order is None or order.shipped:
         order = next((item for item in reversed(customer.orders) if not item.shipped), None)
+
+    teas_to_show = order.teas if order is not None else customer.shopping_cart.teas
+    items_by_id = {}
+    for tea in teas_to_show:
+        if tea.tea_id in items_by_id:
+            items_by_id[tea.tea_id]["quantity"] += 1
+        else:
+            items_by_id[tea.tea_id] = {"tea": tea, "quantity": 1}
+
     return render_template_string(
         """
         <h1>Shipping page</h1><p><a href="{{ url_for('home') }}">Home</a></p>
         {% if order %}<h2>Order {{ order.order_id }}</h2>
-          {% for tea in order.teas %}<p>{{ tea.name }}</p>{% endfor %}
-        {% else %}<p>No unshipped order is available.</p>{% endif %}
+        {% endif %}
+        {% if items %}
+          {% for item in items %}
+            <p>{{ item.tea.name }} — Quantity: {{ item.quantity }} — ${{ '%.2f'|format(item.tea.price) }}</p>
+          {% endfor %}
+        {% else %}<p>Your cart has no items.</p>{% endif %}
         """,
         order=order,
+        items=list(items_by_id.values()),
     )
+
+
+@app.errorhandler(503)
+def shipping_unavailable(error):
+    return render_template_string(
+        "<h1>Shipping page</h1><p>We couldn’t load your order.</p>"
+    ), 503
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
