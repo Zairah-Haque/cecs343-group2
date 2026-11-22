@@ -3,7 +3,27 @@ from types import SimpleNamespace
 import pytest
 from werkzeug.exceptions import ServiceUnavailable
 
-from app import Tea, app, customer
+from app import Catalog, Database, Tea, app, customer
+
+
+# Unit tests: test order creation without making an HTTP request.
+def test_creating_order_preserves_teas_for_the_shipping_page():
+    green_tea = Tea(1, "Green Tea", "Green", "Floral", "Light and fresh", 10.00)
+    order_customer = SimpleNamespace(
+        shopping_cart=SimpleNamespace(teas=[green_tea]),
+        orders=[],
+        checkout_order=None,
+    )
+    order_database = Database(catalog=Catalog(teas=[]))
+
+    order = order_database.create_order(order_customer)
+
+    assert order.order_id == 1
+    assert order.teas == [green_tea]
+    assert order.shipped is False
+    assert order_customer.checkout_order is order
+    assert order_customer.orders == [order]
+    assert order_customer.shopping_cart.teas == []
 
 
 @pytest.fixture
@@ -15,6 +35,7 @@ def _order(*teas):
     return SimpleNamespace(order_id=1, shipped=False, teas=list(teas))
 
 
+# Route tests: exercise the shipping page through Flask's test client.
 def test_main_path_cart_link_opens_shipping_page_with_item_quantity_and_price(
     shipping_client, monkeypatch
 ):
