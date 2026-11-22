@@ -16,6 +16,24 @@ Verified: I read home() and Catalog.filter in app.py against the criteria. I ran
 Not verified: Whether the team accepts filters instead of the tabs in the use case. How the page looks in a browser. No CI run happened on the PR branch itself before the merge. [minor]
 Disposition: Accepted as drafted. The entry was added after the merge, in PR #85.
 
+## PR #80 2026 - 11 - 21 @Santie0
+Tool: ChatGPT, Work
+Requested: Code testing the shipping page based off of Issue #7 acceptance criteria.  
+Generated: 95 lines
+Claimed: Generated code that tests the shipping page based off of Issue #7 acceptance criteria. 
+Verified: Ran pytest of generated code, once with old app.py code and a second time with revised app.py code. First time, 4 tests failed with Assertation Error. Second time, all tests passed.    
+Not verified: Whether code will run on a new codespace. [minor] 
+Disposition: Accepted after reviews from group members. 
+
+## PR #77 2026 - 11 - 21 @Santie0
+Tool: ChatGPT, Work
+Requested: Revised code to fix failures for tests for catalog and shipping page. 
+Generated: 306 lines
+Claimed: Generated revised code that addressed failures in the test code for catalog and shipping page. 
+Verified: Ran pytest of catalog and shipping page tests with newly revised code. All of the tests passed.   
+Not verified: Whether code will run on a new codespace. [minor] 
+Disposition: Accepted after reviews from group members. 
+
 ## PR #76 2026-11-19 @Biltzeebub
 Tool and mode: Claude, Cowork
 Requested: A cleanup of the README Licensing and CI sections: replace the pasted notes with a clean licence statement, and replace the link to one past CI run with the ci.yml status badge.
