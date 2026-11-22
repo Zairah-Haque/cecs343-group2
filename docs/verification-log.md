@@ -1,3 +1,12 @@
+## PR #87 2026-11-21 @Biltzeebub
+Tool and mode: Claude, Cowork
+Requested: A root CHANGELOG.md for the v0.9-beta release (M3 requirement): one line per closed M3 Issue, with its number.
+Generated: CHANGELOG.md with a v0.9-beta section listing #7, #8, #13 and #14, each with its Issue title.
+Claimed: The file lists every closed M3 Issue and only those, with the number and title as on GitHub.
+Verified: I compared each line with the Issue title and state from the GitHub API on 2026-11-21: #7, #8, #13 and #14 are closed in the M3 milestone and the titles match. #10 is still open and is not listed; #18, #19 and #20 are on M4. The Issue #14 timeline shows PR #83 referencing it.
+Not verified: Whether the grader accepts this wording and layout (the format comes from the Canvas requirement as summarized in my task notes, not from an example). Whether #8, which was closed with only commit references and no merged PR, counts as closed. Whether #10 closes or moves to M4 before the tag, which would change this file. [minor]
+Disposition: Accepted as drafted.
+
 ## PR #85 2026-11-21 @Biltzeebub
 Tool and mode: Claude, Cowork
 Requested: Verification Log entries for PR #84 (tests for Issue #13) and PR #76 (README licensing and CI badge), which were merged without entries.
