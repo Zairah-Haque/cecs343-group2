@@ -1,8 +1,29 @@
 from types import SimpleNamespace
 
-from app import Tea, app, customer, database
+from app import Tea, app, customer, database, teas_page
 
 
+# Unit test: call the teas view directly, without making an HTTP request.
+def test_teas_page_renders_catalog_when_called_directly(monkeypatch):
+    tea = Tea(
+        1,
+        "Jasmine Green Tea",
+        "Green",
+        "Floral",
+        "Light green tea scented with jasmine blossoms",
+        4.50,
+    )
+    monkeypatch.setattr(database, "get_teas", lambda: [tea])
+
+    with app.test_request_context("/teas"):
+        page = teas_page()
+
+    assert "Jasmine Green Tea" in page
+    assert "Light green tea scented with jasmine blossoms" in page
+    assert "$4.50" in page
+
+
+# Route tests: exercise the pages through Flask's test client.
 def test_teas_page_shows_names_descriptions_and_prices(monkeypatch):
     teas = [
         Tea(
