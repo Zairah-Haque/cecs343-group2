@@ -34,6 +34,15 @@ Verified: I compared each line with the Issue title and state from the GitHub AP
 Not verified: Whether the grader accepts this wording and layout (the format comes from the Canvas requirement as summarized in my task notes, not from an example). Whether #8, which was closed with only commit references and no merged PR, counts as closed. Whether #10 closes or moves to M4 before the tag, which would change this file. [minor]
 Disposition: Accepted as drafted.
 
+## PR #86 2026 - 11 - 21 @Santie0
+Tool: ChatGPT, Work
+Requested: Add a unit test for test_shipping.py and test_tea_catalog_page.py.
+Generated: One unit test per file. 
+Claimed: For test_shipping.py, the test checks that Database.create_order places the cart's tea in a new, unshipped order, sets it as checkout_order, adds it to the customer's orders, and clears the cart. For test_tea_catalog.py, the test calls teas_page() directly with a Flask request context and checks that the catalog tea's name, description, and price appear in the rendered page.
+Verified: Ran tests with current code and all tests passed. 
+Not verified: What would fail if main code was changed, and whether tests would run in Codespace in Github. [moderate] 
+Disposition: Accepted after review from members. 
+
 ## PR #85 2026-11-21 @Biltzeebub
 Tool and mode: Claude, Cowork
 Requested: Verification Log entries for PR #84 (tests for Issue #13) and PR #76 (README licensing and CI badge), which were merged without entries.
