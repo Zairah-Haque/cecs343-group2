@@ -1,3 +1,13 @@
+
+## PR #92 2026-11-22 @Biltzeebub
+Tool and mode: Claude, Cowork
+Requested: Tests for Issue #10 (add a tea to the cart) covering each acceptance-criteria scenario: main path, unavailable tea, 99-item limit and cart service failure.
+Generated: tests/test_cart.py with 7 tests (2 unit tests on ShoppingCart, 5 route tests through Flask's test client) and a #10 line in CHANGELOG.md. No application code changed.
+Claimed: Each acceptance-criteria scenario in Issue #10 is covered by a passing test at unit and route level, and the tests fail if the behaviour breaks.
+Verified: I ran the full suite on a copy of main at a8e1993 with the new file: 35 passed (Python 3.13). I broke app.py five ways on a scratch copy (cart limit 99 to 100, unavailable check removed, no rollback on failure, add not appending, quantity not incrementing); each break made at least one new test fail, and app.py was restored afterwards. I compared the expected messages in the tests with the strings in app.py. This PR's CI check passed.
+Not verified: A CI run on Python 3.12 other than this PR's own check. The "cart service is unavailable" scenario is simulated with a patched add() that raises, because no separate cart service exists. The README coverage number is out of date once these tests merge; it is refreshed in the last README PR. [minor]
+Disposition: Accepted as drafted.
+
 ## PR #91 2026-11-22 @Biltzeebub
 Tool and mode: Claude, Cowork
 Requested: A ## Coverage section in README.md with the total from the last CI run on main and the command that produced it (M3 requirement).
@@ -5,7 +15,6 @@ Generated: A new ## Coverage section above ## Verification debt: total 79%, app.
 Claimed: The numbers come from the CI run on main after PR #90 merged, and the command is the one CI runs.
 Verified: The pytest step of the Actions run on main commit a8e1993 (Python 3.12) printed TOTAL 79% and app.py 75% with 28 tests passed. The command in the README is the same as the pytest step in .github/workflows/ci.yml.
 Not verified: Whether the number changes if more tests merge before the deadline; it is updated if so. Whether the grader wants the total with or without the test files, since the Canvas wording only asks for the number from the last CI run. [minor]
-Disposition: Accepted as drafted.
 
 ## PR #90 2026-11-21 @Biltzeebub
 Tool and mode: Claude, Cowork
