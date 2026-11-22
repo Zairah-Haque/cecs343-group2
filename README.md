@@ -44,6 +44,12 @@ Dependencies keep their own licences: Flask is BSD-3-Clause and pytest is MIT.
 
 [![CI](https://github.com/Zairah-Haque/cecs343-group2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Zairah-Haque/cecs343-group2/actions/workflows/ci.yml)
 
+## Coverage
+
+Total coverage: 79% (CI run on main, 2026-11-21). Command: `pytest --cov=. --cov-report=term`
+
+The total includes the test files. App code alone (`tea-catalog-code/app.py`): 75%.
+
 ##  Verification debt
 
 Weighted count: 7 (computed 2026-11-06)
