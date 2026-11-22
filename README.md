@@ -36,13 +36,13 @@ pytest
 
 
 ## Licensing:
-Licence: Permissive
-Dependency: How should customers browse the tea catalog: by category, typology, search, or filters? 
-Dependency Licence: Copyright, Display Patch Notes for Updates
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file.
+
+Dependencies keep their own licences: Flask is BSD-3-Clause and pytest is MIT.
 
 ## CI
 
-Successful CI Test : (https://github.com/Zairah-Haque/cecs343-group2/actions/runs/41540435123)
+[![CI](https://github.com/Zairah-Haque/cecs343-group2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Zairah-Haque/cecs343-group2/actions/workflows/ci.yml)
 
 ##  Verification debt
 
