@@ -1,3 +1,12 @@
+## PR #90 2026-11-21 @Biltzeebub
+Tool and mode: Claude, Cowork
+Requested: Changes so CI reports test coverage and runs on release branches (M3 requirements).
+Generated: pytest-cov added to requirements.txt; ci.yml changed to run pytest --cov=. --cov-report=term and to trigger on release/** as well as main.
+Claimed: CI still passes, prints a coverage table, and also runs for pushes and pull requests on release/** branches.
+Verified: I parsed ci.yml as YAML (triggers main and release/** for push and pull_request). I applied both file changes to a copy of main at 807a9c2 in a clean virtual environment (Python 3.13) and ran the CI test step three times: each run passed 28 tests and printed the coverage table (TOTAL 79%, includes test files). This PR's CI check passed.
+Not verified: A CI run on Python 3.12 other than this PR's own check. Whether CI triggers on a release/** branch, since none exists yet. Whether the 100-simultaneous-users timing test in tea-catalog-code/test_catalog_performance.py stays under its limit on the CI runner. [minor]
+Disposition: Accepted as drafted.
+
 ## PR #87 2026-11-21 @Biltzeebub
 Tool and mode: Claude, Cowork
 Requested: A root CHANGELOG.md for the v0.9-beta release (M3 requirement): one line per closed M3 Issue, with its number.

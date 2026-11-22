@@ -1,9 +1,9 @@
 name: CI
 on:
   push:
-    branches: [ main ]
+    branches: [ main, "release/**" ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, "release/**" ]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -13,4 +13,4 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - run: pytest
+      - run: pytest --cov=. --cov-report=term
