@@ -1,3 +1,30 @@
+## PR #85 2026-11-21 @Biltzeebub
+Tool and mode: Claude, Cowork
+Requested: Verification Log entries for PR #84 (tests for Issue #13) and PR #76 (README licensing and CI badge), which were merged without entries.
+Generated: Two log entries, one for #84 and one for #76, and this entry.
+Claimed: Each entry records only what was checked for its PR, and the entries are in newest-first order with one blank line between them.
+Verified: I compared the entries with the merged PRs. #84 adds only tests/test_home_filter.py and #76 changes only the README Licensing and CI sections. The Files changed tab shows only docs/verification-log.md with three entries added.
+Not verified: Whether the date format in the headings matches the teammates' entries, which use several formats. [minor]
+Disposition: Accepted as drafted.
+
+## PR #84 2026-11-21 @Biltzeebub
+Tool and mode: Claude, Cowork
+Requested: Acceptance criteria and tests for Issue #13 (browse teas by type and profile), so the Issue can be closed with a PR.
+Generated: The acceptance-criteria text added to Issue #13, and tests/test_home_filter.py with 5 unit tests of Catalog.filter and 6 route tests of GET /. No application code changed.
+Claimed: The criteria describe what the main page does today, and each criterion is covered by a passing unit test and a passing route test.
+Verified: I read home() and Catalog.filter in app.py against the criteria. I ran the full suite on main with the new file: 25 passed. I broke the type comparison in Catalog.filter on a scratch copy and 6 of the 11 new tests failed. The CI run on main after the merge (de01cbc) passed, and Issue #13 closed with the merge.
+Not verified: Whether the team accepts filters instead of the tabs in the use case. How the page looks in a browser. No CI run happened on the PR branch itself before the merge. [minor]
+Disposition: Accepted as drafted. The entry was added after the merge, in PR #85.
+
+## PR #76 2026-11-19 @Biltzeebub
+Tool and mode: Claude, Cowork
+Requested: A cleanup of the README Licensing and CI sections: replace the pasted notes with a clean licence statement, and replace the link to one past CI run with the ci.yml status badge.
+Generated: A rewritten Licensing section (Apache License 2.0, link to LICENSE, one line on the Flask and pytest licences) and a CI badge for main.
+Claimed: The statement matches the LICENSE file, the dependency licences are correct, and the badge points to the ci.yml workflow on main.
+Verified: I read the LICENSE file (Apache 2.0) and GitHub reports Apache-2.0 for the repo. PyPI lists Flask 3.1.3 as BSD-3-Clause and pytest 9.2.0 as MIT, checked 2026-11-19. The badge and workflow URLs return HTTP 200. A diff against main shows only the Licensing and CI sections changed. The CI run on main after the merge (d88b1a5) passed.
+Not verified: Whether the removed line "Copyright, Display Patch Notes for Updates" was a course requirement. The dependency licences for later versions, since requirements.txt does not pin versions. [minor]
+Disposition: Accepted as drafted. The entry was added after the merge, in PR #85.
+
 ## PR #73 2026-11-19 @Biltzeebub
 Tool and mode: Claude, chat
 Requested: Exact wording to update the PR #64 log entry after a fresh-Codespace test on main, and the log entry for this PR.
