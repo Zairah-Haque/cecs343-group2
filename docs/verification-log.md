@@ -1,3 +1,11 @@
+PR #93 2026 - 11 - 22 @Santie0
+Tool: ChatGPT, Work
+Requested: Add separate unit and route tests for removing tea from the cart.
+Generated: One unit test and six route tests for tests/test_remove_from_cart.py.
+Claimed: The unit test checks that removing a tea removes one matching copy. The route tests check removing a tea, keeping other teas in the cart, showing “Your cart is empty.” after the last tea is removed, removing the selected tea, reducing quantity by one, and displaying the empty-cart message for an already empty cart.
+Verified: Reviewed the tests against the repository’s ShoppingCart.remove method, and ran test which all passed. 
+Not verified: Whether code runs in GitHub Codespaces. [minor]
+Disposition: Accepted after review. 
 
 ## PR #92 2026-11-22 @Biltzeebub
 Tool and mode: Claude, Cowork
