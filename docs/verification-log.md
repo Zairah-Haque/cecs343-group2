@@ -1,3 +1,12 @@
+## PR #91 2026-11-22 @Biltzeebub
+Tool and mode: Claude, Cowork
+Requested: A ## Coverage section in README.md with the total from the last CI run on main and the command that produced it (M3 requirement).
+Generated: A new ## Coverage section above ## Verification debt: total 79%, app.py 75%, date 2026-11-21, and the command pytest --cov=. --cov-report=term.
+Claimed: The numbers come from the CI run on main after PR #90 merged, and the command is the one CI runs.
+Verified: The pytest step of the Actions run on main commit a8e1993 (Python 3.12) printed TOTAL 79% and app.py 75% with 28 tests passed. The command in the README is the same as the pytest step in .github/workflows/ci.yml.
+Not verified: Whether the number changes if more tests merge before the deadline; it is updated if so. Whether the grader wants the total with or without the test files, since the Canvas wording only asks for the number from the last CI run. [minor]
+Disposition: Accepted as drafted.
+
 ## PR #90 2026-11-21 @Biltzeebub
 Tool and mode: Claude, Cowork
 Requested: Changes so CI reports test coverage and runs on release branches (M3 requirements).
