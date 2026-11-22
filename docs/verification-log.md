@@ -1,3 +1,21 @@
+## PR #80 2026 - 11 - 21 @Santie0
+Tool: ChatGPT, Work
+Requested: Code testing the shipping page based off of Issue #7 acceptance criteria.  
+Generated: 95 lines
+Claimed: Generated code that tests the shipping page based off of Issue #7 acceptance criteria. 
+Verified: Ran pytest of generated code, once with old app.py code and a second time with revised app.py code. First time, 4 tests failed with Assertation Error. Second time, all tests passed.    
+Not verified: Whether code will run on a new codespace. [minor] 
+Disposition: Accepted after reviews from group members. 
+
+## PR #77 2026 - 11 - 21 @Santie0
+Tool: ChatGPT, Work
+Requested: Revised code to fix failures for tests for catalog and shipping page. 
+Generated: 306 lines
+Claimed: Generated revised code that addressed failures in the test code for catalog and shipping page. 
+Verified: Ran pytest of catalog and shipping page tests with newly revised code. All of the tests passed.   
+Not verified: Whether code will run on a new codespace. [minor] 
+Disposition: Accepted after reviews from group members. 
+
 ## PR #73 2026-11-19 @Biltzeebub
 Tool and mode: Claude, chat
 Requested: Exact wording to update the PR #64 log entry after a fresh-Codespace test on main, and the log entry for this PR.
