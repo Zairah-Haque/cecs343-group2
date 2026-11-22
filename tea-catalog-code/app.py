@@ -201,6 +201,7 @@ def teas_page():
 
 def _render_cart(message=None):
     items_by_id = {}
+
     for tea in customer.shopping_cart.teas:
         if tea.tea_id in items_by_id:
             items_by_id[tea.tea_id]["quantity"] += 1
@@ -208,24 +209,55 @@ def _render_cart(message=None):
             items_by_id[tea.tea_id] = {"tea": tea, "quantity": 1}
 
     items = list(items_by_id.values())
-    subtotal = sum(item["tea"].price * item["quantity"] for item in items)
+    subtotal = sum(
+        item["tea"].price * item["quantity"]
+        for item in items
+    )
+
     return render_template_string(
         """
-        <h1>Shopping cart</h1><p><a href="{{ url_for('home') }}">Home</a></p>
-        {% if message %}<p role="alert">{{ message }}</p>{% endif %}
-        {% for item in items %}
-          <p>{{ item.tea.name }} — Quantity: {{ item.quantity }} — ${{ '%.2f'|format(item.tea.price) }} each
-            <form method="post" action="{{ url_for('remove_from_cart', tea_id=item.tea.tea_id) }}"><button>Remove</button></form>
-          </p>
-        {% else %}<p>Your cart is empty.</p>{% endfor %}
+        <h1>Shopping cart</h1>
+        <p><a href="{{ url_for('home') }}">Home</a></p>
+
+        {% if message %}
+          <p role="alert">{{ message }}</p>
+        {% endif %}
+
+        {% if items %}
+          <ul>
+            {% for item in items %}
+              <li>
+                <span>{{ item.tea.name }}</span>
+                <form
+                  method="post"
+                  action="{{ url_for('remove_from_cart', tea_id=item.tea.tea_id) }}"
+                  style="display: inline"
+                >
+                  <button
+                    type="submit"
+                    aria-label="Remove one {{ item.tea.name }} from cart"
+                    title="Remove one {{ item.tea.name }} from cart"
+                  >🗑</button>
+                </form>
+                — Quantity: {{ item.quantity }}
+                — ${{ '%.2f'|format(item.tea.price) }} each
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>Your cart is empty.</p>
+        {% endif %}
+
         <p>Subtotal: ${{ '%.2f'|format(subtotal) }}</p>
-        <form method="post" action="{{ url_for('checkout') }}"><button>Checkout</button></form>
+
+        <form method="post" action="{{ url_for('checkout') }}">
+          <button type="submit">Checkout</button>
+        </form>
         """,
         items=items,
         subtotal=subtotal,
         message=message,
     )
-
 
 @app.get("/cart")
 def cart_page():
