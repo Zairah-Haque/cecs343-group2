@@ -31,7 +31,7 @@ Created for customers who are looking to buy tea from merchants who sell them vi
 - **Number:** 0 customer passwords stored in readable form
 - **Measured over:** 100% of stored customer passwords
 - **Conditions:** inspection of the database and of its backups
-- **Where the number came from:** [one clause]
+- **Where the number came from:** a single readable password is a breach, so no number above zero is acceptable
 - **Owner:** @kekoavan
 
 ### Q3. No duplicate orders (#19)

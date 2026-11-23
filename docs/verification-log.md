@@ -1,3 +1,12 @@
+## PR #101 2026-11-22 @kekoavan
+Tool and mode: Claude
+Requested: Tests for Issue #20 showing stored passwords and backups contain no readable passwords.
+Generated: tests/test_passwords.py with 7 unit tests. No application code changed.
+Claimed: Passwords are stored only as a salt and PBKDF2 hash, the backup copies only those, and the tests fail if that breaks.
+Verified: I ran the suite: 50 passed. I planted four bugs on a scratch copy of app.py (plaintext digest, fixed salt, backup leak, verify always true) and each made at least one new test fail.
+Not verified: No route-level test, since no route handles passwords. The demo password is still written in plain text in app.py line 130 (source code, not the database or backup). [minor]
+Disposition: Accepted as drafted.
+
 ## PR #93 2026 - 11 - 22 @Santie0
 Tool: ChatGPT, Work
 Requested: Add separate unit and route tests for removing tea from the cart.
