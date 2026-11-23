@@ -1,5 +1,13 @@
-"""Unit and route-level tests for issue #14 : repeated checkout submissions."""
+"""Issue #19: Prevent multiple orders from being submitted.
 
+Unit test:
+- test_repeated_order_creation_returns_one_order calls Database.create_order()
+  100 times and checks that only one order is created.
+
+Route test:
+- test_100_checkout_submissions_create_only_one_order posts to /checkout
+  100 times through Flask's test client and checks that only one order is created.
+"""
 from types import SimpleNamespace
 
 from app import Catalog, Database, ShoppingCart, Tea, app, customer, database
