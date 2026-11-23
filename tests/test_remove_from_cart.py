@@ -1,3 +1,9 @@
+"""Unit and route-level tests for Issue #14: remove tea from cart.
+
+The unit test calls ShoppingCart directly. The route-level tests use
+Flask's test client.
+"""
+
 import pytest
 
 from app import ShoppingCart, Tea, app, catalog, customer
