@@ -1,3 +1,11 @@
+## PR #93 2026 - 11 - 22 @Santie0
+Tool: ChatGPT, Work
+Requested: Add separate unit and route tests for removing tea from the cart.
+Generated: One unit test and six route tests for tests/test_remove_from_cart.py.
+Claimed: The unit test checks that removing a tea removes one matching copy. The route tests check removing a tea, keeping other teas in the cart, showing “Your cart is empty.” after the last tea is removed, removing the selected tea, reducing quantity by one, and displaying the empty-cart message for an already empty cart.
+Verified: Reviewed the tests against the repository’s ShoppingCart.remove method, and ran test which all passed. 
+Not verified: Whether code runs in GitHub Codespaces. [minor]
+Disposition: Accepted after review. 
 
 ## PR #92 2026-11-22 @Biltzeebub
 Tool and mode: Claude, Cowork
@@ -33,6 +41,15 @@ Claimed: The file lists every closed M3 Issue and only those, with the number an
 Verified: I compared each line with the Issue title and state from the GitHub API on 2026-11-21: #7, #8, #13 and #14 are closed in the M3 milestone and the titles match. #10 is still open and is not listed; #18, #19 and #20 are on M4. The Issue #14 timeline shows PR #83 referencing it.
 Not verified: Whether the grader accepts this wording and layout (the format comes from the Canvas requirement as summarized in my task notes, not from an example). Whether #8, which was closed with only commit references and no merged PR, counts as closed. Whether #10 closes or moves to M4 before the tag, which would change this file. [minor]
 Disposition: Accepted as drafted.
+
+## PR #86 2026 - 11 - 21 @Santie0
+Tool: ChatGPT, Work
+Requested: Add a unit test for test_shipping.py and test_tea_catalog_page.py.
+Generated: One unit test per file. 
+Claimed: For test_shipping.py, the test checks that Database.create_order places the cart's tea in a new, unshipped order, sets it as checkout_order, adds it to the customer's orders, and clears the cart. For test_tea_catalog.py, the test calls teas_page() directly with a Flask request context and checks that the catalog tea's name, description, and price appear in the rendered page.
+Verified: Ran tests with current code and all tests passed. 
+Not verified: What would fail if main code was changed, and whether tests would run in Codespace in Github. [moderate] 
+Disposition: Accepted after review from members. 
 
 ## PR #85 2026-11-21 @Biltzeebub
 Tool and mode: Claude, Cowork
