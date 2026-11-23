@@ -1,3 +1,8 @@
+"""Unit and route-level tests for Issue #10: adding tea to the cart.
+
+Unit tests call ShoppingCart directly. Route-level tests send requests
+through Flask's test client.
+"""
 import pytest
 
 from app import ShoppingCart, Tea, app, catalog, customer
