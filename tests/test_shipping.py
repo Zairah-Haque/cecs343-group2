@@ -1,3 +1,11 @@
+"""Unit and route-level tests for Issue #7: customers can view their order
+on the shipping page.
+
+Unit test: verifies order creation preserves the teas.
+Route tests: verify /shipping displays order contents and handles empty
+or unavailable orders.
+"""
+
 from types import SimpleNamespace
 
 import pytest
