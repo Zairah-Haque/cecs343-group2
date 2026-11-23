@@ -7,3 +7,6 @@
 - #13 Compile Tea Catalog and Typology
 - #14 Removing Tea From Cart
 - #18 How fast the catalog page responds
+- #19 Prevent multiple orders from being submitted
+- #20 Protecting customer passwords by encryption
+  
