@@ -1,3 +1,10 @@
+"""Issue #18 tests.
+
+Unit-level: checks the catalog view logic directly.
+Route-level: checks catalog response time through HTTP requests.
+"""
+
+
 import math
 import threading
 import time
