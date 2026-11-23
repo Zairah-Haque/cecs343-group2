@@ -1,3 +1,5 @@
+"""Unit and route-level tests for Issue #7: create/tea."""
+
 from types import SimpleNamespace
 
 from app import Tea, app, customer, database, teas_page
