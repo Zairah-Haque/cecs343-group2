@@ -6,3 +6,4 @@
 - #10 Adding Tea Choice to Cart
 - #13 Compile Tea Catalog and Typology
 - #14 Removing Tea From Cart
+- #18 How fast the catalog page responds
